@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t 'food_enquetes.index.title' %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= FoodEnquete.human_attribute_name(:name) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:mail) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:age) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:food_id) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:score) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:request) %></th>
+      <th><%= FoodEnquete.human_attribute_name(:present_id) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_enquetes.each do |food_enquete| %>
+      <tr>
+        <td><%= food_enquete.name %></td>
+        <td><%= food_enquete.mail %></td>
+        <td><%= food_enquete.age %></td>
+        <td><%= food_enquete.food_name %></td>
+        <td><%= food_enquete.view_score %></td>
+        <td><%= food_enquete.request %></td>
+        <td><%= food_enquete.present_name %></td>
+        <td><%= link_to (t 'common.show'), food_enquete %></td>
+        <td><%= link_to (t 'common.edit'), edit_food_enquete_path(food_enquete) %></td>
+        <td><%= link_to (t 'common.index.destroy'), food_enquete, method: :delete, data: { confirm: (t 'common.index.destroy_confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to (t 'common.new'), new_food_enquete_path %>
