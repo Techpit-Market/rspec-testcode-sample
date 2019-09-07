@@ -1,0 +1,14 @@
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, maxlength: 16 %><%# 最大16文字 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mail %>
+    <%= form.text_field :mail, maxlength: 64 %><%# 最大64文字 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, in: 0 .. 100 %><%# 0〜100歳 %>
+  </div>
