@@ -9,7 +9,7 @@ RSpec.describe "FoodEnquetes", type: :request do
   
         post "/food_enquetes", params: { food_enquete: FactoryBot.attributes_for(:food_enquete_tanaka) }
         follow_redirect!
-        expect(response.body).to include "ご回答ありがとうございました"
+        expect(response.body).to include "お食事に関するアンケートを送信しました"
       end
     end
   end
@@ -21,7 +21,7 @@ RSpec.describe "FoodEnquetes", type: :request do
         expect(response).to have_http_status(200)
     
         post "/food_enquetes", params: { food_enquete: { name: '' } }
-        expect(response.body).not_to include "ご回答ありがとうございました"
+        expect(response.body).not_to include "お食事に関するアンケートを送信しました"
       end
     end
   end

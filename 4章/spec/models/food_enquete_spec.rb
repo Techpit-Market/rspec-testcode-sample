@@ -29,11 +29,12 @@ RSpec.describe FoodEnquete, type: :model do
         FactoryBot.create(:food_enquete_tanaka)
       end
   
-      it '同じメールアドレスで再び回答できること' do
+      it '同じメールアドレスで再び回答できないこと' do
         re_enquete_tanaka = FactoryBot.build(:food_enquete_tanaka, food_id: 0, score: 1, present_id: 0, request: "スープがぬるかった")
-        expect(re_enquete_tanaka).to be_valid
-        expect(re_enquete_tanaka.save).to be_truthy
-        expect(FoodEnquete.all.size).to eq 2
+        expect(re_enquete_tanaka).not_to be_valid
+        expect(re_enquete_tanaka.errors[:mail]).to include(I18n.t('errors.messages.taken'))
+        expect(re_enquete_tanaka.save).to be_falsey
+        expect(FoodEnquete.all.size).to eq 1
       end
   
       it '異なるメールアドレスで回答できること' do  

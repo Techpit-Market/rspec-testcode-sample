@@ -50,12 +50,12 @@ shared_examples '価格の表示' do
     # 【学習者の方へ】
     # 2019年10月以降に学習される方も8%で進めてください。
     # 後ほど、仕様変更するシナリオになっています。
-    it '10%加算されること' do
-      expect(model.tax_included_price(100)).to eq 110
+    it '8%加算されること' do
+      expect(model.tax_included_price(100)).to eq 108
     end
 
-    it '10%加算され、小数が切り捨てられること' do
-      expect(model.tax_included_price(101)).to eq 111
+    it '8%加算され、小数が切り捨てられること' do
+      expect(model.tax_included_price(101)).to eq 109
     end
   end
 end
