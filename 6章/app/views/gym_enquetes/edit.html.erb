@@ -1,0 +1,6 @@
+<h1><%= t 'gym_enquetes.common.title' %></h1>
+
+<%= render 'form', gym_enquete: @gym_enquete %>
+
+<%= link_to (t 'common.show'), @gym_enquete %> |
+<%= link_to (t 'common.back'), gym_enquetes_path %>

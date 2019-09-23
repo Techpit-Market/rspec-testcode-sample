@@ -1,0 +1,29 @@
+<%= form_with(model: gym_enquete, local: true) do |form| %>
+  <% if gym_enquete.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% gym_enquete.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render 'concerns/form_name_mail_age', form: form %>
+
+  <div class="field">
+    <%= form.label :course_id %>
+    <%= form.select :course_id, gym_enquete.course_choices %><%# 脂肪燃焼、ヨガ %>
+  </div>
+
+  <%= render 'concerns/form_score_request', form: form %>
+
+  <div class="field">
+    <%= form.label :present_id %>
+    <%= form.select :present_id, gym_enquete.present_choices %><%# サプリメントセット、温泉旅行 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

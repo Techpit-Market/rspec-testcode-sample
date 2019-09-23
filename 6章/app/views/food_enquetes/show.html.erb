@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:name) %>:</strong>
+  <%= @food_enquete.name %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:mail) %>:</strong>
+  <%= @food_enquete.mail %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:age) %>:</strong>
+  <%= @food_enquete.age %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:food_id) %>:</strong>
+  <%= @food_enquete.food_name %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:score) %>:</strong>
+  <%= @food_enquete.view_score %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:request) %>:</strong>
+  <%= @food_enquete.request %>
+</p>
+
+<p>
+  <strong><%= FoodEnquete.human_attribute_name(:present_id) %>:</strong>
+  <%= @food_enquete.present_name %>
+</p>
+
+<%= link_to (t 'common.edit'), edit_food_enquete_path(@food_enquete) %> |
+<%= link_to (t 'common.back'), food_enquetes_path %>
