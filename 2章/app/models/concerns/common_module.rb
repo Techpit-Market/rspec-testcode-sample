@@ -1,6 +1,9 @@
 module CommonModule
   extend ActiveSupport::Concern
 
+  # 【学習者の方へ】
+  # 2019年10月以降に学習される方も8%で進めてください。
+  # 後ほど、仕様変更するシナリオになっています。
   TAX = 1.08        # 本体価格 + 消費税率
   SCORE_BAD = 1     # 満足度:悪い
   SCORE_NORMAL = 2  # 満足度:普通
