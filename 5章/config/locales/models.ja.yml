@@ -1,0 +1,45 @@
+ja:
+  activerecord:
+    models:
+      food_enquete: お食事に関するアンケート
+      gym_enquete: スポーツジムに関するアンケート
+    attributes:
+      food_enquete:
+        food_id: お召し上がりになった料理
+        food_list:
+          - name: ラーメン
+            price: 500
+          - name: カレー
+            price: 500
+          - name: やきそば
+            price: 300
+        present_list:
+          - name: 【100名に当たる】ソフトドリンク飲み放題
+            price: 300
+          - name: 【10名に当たる】ビール飲み放題
+            price: 900
+      gym_enquete:
+        course_id: ご参加のコース
+        course_list:
+          - name: 脂肪燃焼
+            price: 2000
+          - name: ヨガ
+            price: 3000
+        present_list:
+          - name: 【100名に当たる】サプリメントセット
+            price: 300
+          - name: 【5名に当たる】温泉旅行
+            price: 900
+    errors:
+      models:
+        food_enquete:
+          attributes:
+            present_id:
+              cannot_present_to_minor: は成人の方のみ選択できます
+  attributes:
+    name: お名前
+    mail: メールアドレス
+    age: 年齢
+    score: 満足度
+    request: ご意見・ご要望
+    present_id: ご希望のプレゼント

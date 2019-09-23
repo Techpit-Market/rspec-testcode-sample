@@ -1,0 +1,13 @@
+  <div class="field">
+    <%= form.label :score %>
+    <label>
+      <%= form.radio_button :score, CommonModule::SCORE_BAD %><%= t('common.score.bad') %><%# 悪い %>
+      <%= form.radio_button :score, CommonModule::SCORE_NORMAL %><%= t('common.score.normal') %><%# 普通 %>
+      <%= form.radio_button :score, CommonModule::SCORE_GOOD %><%= t('common.score.good') %><%# 良い %>
+    </label>
+  </div>
+
+  <div class="field">
+    <%= form.label :request %>
+    <%= form.text_field :request %><%# 最大150文字 %>
+  </div>

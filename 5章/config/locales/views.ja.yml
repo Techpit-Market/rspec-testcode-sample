@@ -1,0 +1,25 @@
+ja:
+  common:
+    show: 詳細
+    edit: 更新
+    back: 戻る
+    new: 新しいアンケート
+    index:
+      destroy: 削除
+      destroy_confirm: 削除しますか?
+    score:
+      good: 良い
+      normal: 普通
+      bad: 悪い
+      unknown: 不明
+    price_and_tax: "%{name} %{price}円 (税込%{tax_included_price}円)"
+  food_enquetes:
+    common:
+      title: お食事に関するアンケート
+    index:
+      title: お食事に関するアンケート一覧
+  gym_enquetes:
+    common:
+      title: スポーツジムに関するアンケート
+    index:
+      title: スポーツジムに関するアンケート一覧

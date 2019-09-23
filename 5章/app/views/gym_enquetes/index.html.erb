@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t 'gym_enquetes.index.title' %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= GymEnquete.human_attribute_name(:name) %></th>
+      <th><%= GymEnquete.human_attribute_name(:mail) %></th>
+      <th><%= GymEnquete.human_attribute_name(:age) %></th>
+      <th><%= GymEnquete.human_attribute_name(:course_id) %></th>
+      <th><%= GymEnquete.human_attribute_name(:score) %></th>
+      <th><%= GymEnquete.human_attribute_name(:request) %></th>
+      <th><%= GymEnquete.human_attribute_name(:present_id) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gym_enquetes.each do |gym_enquete| %>
+      <tr>
+        <td><%= gym_enquete.name %></td>
+        <td><%= gym_enquete.mail %></td>
+        <td><%= gym_enquete.age %></td>
+        <td><%= gym_enquete.course_name %></td>
+        <td><%= gym_enquete.view_score %></td>
+        <td><%= gym_enquete.request %></td>
+        <td><%= gym_enquete.present_name %></td>
+        <td><%= link_to (t 'common.show'), gym_enquete %></td>
+        <td><%= link_to (t 'common.edit'), edit_gym_enquete_path(gym_enquete) %></td>
+        <td><%= link_to (t 'common.index.destroy'), gym_enquete, method: :delete, data: { confirm: (t 'common.index.destroy_confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to (t 'common.new'), new_gym_enquete_path %>
