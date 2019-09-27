@@ -17,7 +17,7 @@ module CommonModule
     # 名前 必須入力 最大16文字
     validates :name, presence: true, length: { maximum: 16 }
 
-    # メールアドレス 必須入力 最大64文字 メールアドレスの形式 重複メールアドレスは不可 
+    # メールアドレス 必須入力 最大64文字 メールアドレスの形式
     validates :mail, presence: true, length: { maximum: 64 }, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 
     # 年齢 必須入力 数値 整数のみ 0〜100歳
